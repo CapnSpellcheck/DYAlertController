@@ -201,7 +201,7 @@ open class DYAlertController: UIViewController, UITableViewDelegate, UITableView
     ///   - checkmarks: .single works with and without OK button. none only without OK button. multiple requires an OK button!
     ///   - customFrameWidth: by default set to 267. Set a custom width, e.g. if your app is supposed to run on larger screens or your actions have very short titles.
     ///   - backgroundEffect: .dim or .blur
-    public convenience init(style:Style, title:String?, titleIconImage:UIImage?, message:String?, cancelButtonTitle:String,  checkmarks:SelectionType, customFrameWidth:CGFloat?, backgroundEffect: EffectViewMode) {
+    public convenience init(style:Style, title:String?, titleIconImage:UIImage?, message:String?, cancelButtonTitle:String?,  checkmarks:SelectionType, customFrameWidth:CGFloat?, backgroundEffect: EffectViewMode) {
         
    //   type(of: self).init()
         
@@ -822,12 +822,16 @@ open class DYAlertController: UIViewController, UITableViewDelegate, UITableView
            action.selected = true
             
             tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
-            
+            if action.handler != nil {
+               action.handler!(action)
+            }
+            /*
              self.dismiss(animated: true, completion: {
                 if action.handler != nil {
                         action.handler!(action)
                     }
              })
+         */
 
         }
         
@@ -844,11 +848,12 @@ open class DYAlertController: UIViewController, UITableViewDelegate, UITableView
             let action = alertActions[(indexPath as NSIndexPath).row]
 
             action.selected = false
+         /*
             if action.handler != nil {
                 action.handler!(action)
                 
             }
-            
+            */
         }
  
     }
@@ -871,7 +876,7 @@ open class DYAlertController: UIViewController, UITableViewDelegate, UITableView
         heightLabel.text = "Height"
         heightLabel.sizeToFit()
         
-        return max(30.0, heightLabel.frame.size.height * 1.8)
+        return max(57.0, heightLabel.frame.size.height * 1.8)
     }
     
     //MARK: Actions

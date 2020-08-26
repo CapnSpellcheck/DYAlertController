@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,7 +48,7 @@
                             <rect key="frame" x="54" y="180.5" width="267" height="288"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yga-nh-V56" userLabel="MainView">
-                                    <rect key="frame" x="0.0" y="0.0" width="267" height="237"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="267" height="218"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5U-Eu-b2a" userLabel="TitleView">
                                             <rect key="frame" x="0.0" y="0.0" width="267" height="88.5"/>
@@ -122,7 +123,7 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-aw-JqQ">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-aw-JqQ">
                                             <rect key="frame" x="0.0" y="89.5" width="267" height="146.5"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -133,14 +134,14 @@
                                         </tableView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-t4-R8i" userLabel="topSeparatorLIne">
                                             <rect key="frame" x="0.0" y="89.5" width="267" height="1"/>
-                                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="uei-PU-mTB"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuL-GW-re2" userLabel="bottomSeparatorLine">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuL-GW-re2" userLabel="bottomSeparatorLine">
                                             <rect key="frame" x="0.0" y="236" width="267" height="1"/>
-                                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="Iie-63-5aU"/>
                                             </constraints>
@@ -171,23 +172,23 @@
                                     </variation>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXD-Pd-uIg">
-                                    <rect key="frame" x="0.0" y="250" width="125" height="38"/>
+                                    <rect key="frame" x="0.0" y="231" width="125" height="57"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="38" id="Fut-Uf-ReX"/>
+                                        <constraint firstAttribute="height" constant="57" id="Fut-Uf-ReX"/>
                                         <constraint firstAttribute="width" constant="125" id="wAV-iE-dRF"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                     <state key="normal" title="Abort"/>
                                     <connections>
                                         <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="Zwk-r1-atS"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-zq-dmE">
-                                    <rect key="frame" x="142" y="250" width="125" height="38"/>
+                                    <rect key="frame" x="142" y="231" width="125" height="57"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="38" id="7lY-FK-IYd"/>
+                                        <constraint firstAttribute="height" constant="57" id="7lY-FK-IYd"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                     <state key="normal" title="Do it!">
                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -196,7 +197,7 @@
                                     </connections>
                                 </button>
                                 <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5R-2x-dD6">
-                                    <rect key="frame" x="133" y="249" width="1" height="41"/>
+                                    <rect key="frame" x="133" y="230" width="1" height="41"/>
                                     <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="KuY-VJ-OgX"/>

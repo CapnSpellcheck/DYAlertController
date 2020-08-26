@@ -363,7 +363,7 @@ open class DYAlertController: UIViewController, UITableViewDelegate, UITableView
         mainView.backgroundColor = settings.mainViewBackgroundColor
   
         
-        let separatorLineColor:UIColor  =   {   if #available(iOS 13.0, *) { return UIColor.systemGray2} else {return UIColor.lightGray} }()
+        let separatorLineColor:UIColor  =   {return UIColor.lightGray} ()
         topSeparatorLine.backgroundColor = separatorLineColor
         bottomSeparatorLine.backgroundColor = separatorLineColor
         buttonSeparatorLine?.backgroundColor = separatorLineColor
@@ -1160,7 +1160,7 @@ extension DYAlertController: UIViewControllerAnimatedTransitioning {
     
 }
 
-
+/*
 @available(iOS 13.0, *) public extension DYAlertController {
     /// use this function in iOS 13 with SwiftUI to present the DYAlertController instance.
     func present() {
@@ -1205,4 +1205,4 @@ extension DYAlertController: UIViewControllerAnimatedTransitioning {
     }
 }
 
-
+*/

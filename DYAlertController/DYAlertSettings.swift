@@ -12,28 +12,28 @@ import UIKit
 public struct DYAlertSettings {
     
 //MARK: title view settings
-    public var titleTextColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.label }   else   { return UIColor.darkGray }}()
-    public var messageTextColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.secondaryLabel }   else   { return UIColor.gray }}()
+    public var titleTextColor: UIColor = { return UIColor.darkGray }()
+    public var messageTextColor: UIColor = {  return UIColor.gray }()
     public var titleTextFont =  UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
     public var messageTextFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
-    public var titleIconTintColor: UIColor  = { if #available(iOS 13.0, *) {  return UIColor.label }   else   { return UIColor.darkGray }}()
+    public var titleIconTintColor: UIColor  = { return UIColor.darkGray }()
         public var titleViewBackgroundColor = UIColor.clear
     
 //MARK: text field settings
-    public var textFieldBackgroundColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.tertiaryLabel }   else   { return UIColor.paleGrayColor() }}()
-    public var textFieldTextColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.label }   else   { return UIColor.white }}()
+    public var textFieldBackgroundColor: UIColor = {  return UIColor.paleGrayColor() }()
+    public var textFieldTextColor: UIColor = { return UIColor.white }()
     public var textFieldFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         public var textFieldTextAlignment = NSTextAlignment.center
 
     
     //MARK: button settings
-    public var okButtonBackgroundColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.secondarySystemBackground }   else   { return UIColor.white }}()
-    public var okButtonTintColorDefault: UIColor = { if #available(iOS 13.0, *) {  return UIColor.systemBlue }   else   { return UIColor.defaultBlueTintColor() }}()
-    public var okButtonTintColorDestructive = UIColor.systemRed
+    public var okButtonBackgroundColor: UIColor = {return UIColor.white }()
+    public var okButtonTintColorDefault: UIColor = { return UIColor.defaultBlueTintColor() }()
+    public var okButtonTintColorDestructive = UIColor(red: 255.0/255.0, green: 59.0/255.0, blue: 48.0/255.0, alpha: 1) // rgba(255.0, 59.0, 48.0, 1.0)
     public var okButtonTintColorDisabled = UIColor.paleGrayColor()
 
     public var cancelButtonTintColorDefault = UIColor.defaultBlueTintColor()
-    public var cancelButtonBackgroundColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.secondarySystemBackground }   else   { return UIColor.white }}()
+    public var cancelButtonBackgroundColor: UIColor = { return UIColor.white }()
     
     public var buttonFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
     public var buttonCornerRadius:CGFloat = 5.0
@@ -41,7 +41,7 @@ public struct DYAlertSettings {
     
     //MARK: content view / main view settings
     public var contentViewCornerRadius:CGFloat = 8.0
-    public var mainViewBackgroundColor: UIColor  = { if #available(iOS 13.0, *) {  return UIColor.secondarySystemBackground }   else   { return UIColor.white }}()
+    public var mainViewBackgroundColor: UIColor  = { return UIColor.white }()
 
     //MARK: effect view settings
     public var blurViewStyle: UIBlurEffect.Style = .dark
@@ -55,10 +55,10 @@ public struct DYAlertSettings {
     
     /// access and override the properties of action cells, like so: alert.actionCellSettings.defaultTintColor = UIColor.green
     public struct ActionCellSettings {
-    public var deselectedTintColor: UIColor = { if #available(iOS 13.0, *) {  return UIColor.secondaryLabel }   else   { return UIColor.gray }}()
-    public var defaultTintColor:UIColor  =  { if #available(iOS 13.0, *) {  return UIColor.systemBlue }   else   { return UIColor.defaultBlueTintColor() }}()
-    public var destructiveTintColor = UIColor.systemRed
-    public var disabledTintColor: UIColor  = { if #available(iOS 13.0, *) {  return UIColor.tertiaryLabel }   else   { return UIColor.paleGrayColor() }}()
+    public var deselectedTintColor: UIColor = { return UIColor.gray }()
+    public var defaultTintColor:UIColor  =  { return UIColor.defaultBlueTintColor() }()
+    public var destructiveTintColor = UIColor(red: 255.0/255.0, green: 59.0/255.0, blue: 48.0/255.0, alpha: 1) // rgba(255.0, 59.0, 48.0, 1.0)
+    public var disabledTintColor: UIColor  = { return UIColor.paleGrayColor() }()
     public var actionCellFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
  }
     
